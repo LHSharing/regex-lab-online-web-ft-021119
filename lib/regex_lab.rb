@@ -2,7 +2,6 @@ require 'pry'
 def starts_with_a_vowel?(word)
   vowels = %w(A E I O U a e i o u)
     word.start_with?(*vowels)
-    #binding.pry
   end
 def words_starting_with_un_and_ending_with_ing(text)
 #returns an array with the words starting with
@@ -11,7 +10,8 @@ text.scan(/un\w+ing/)
 end
 
 def words_five_letters_long(text)
-#returns an array of words that are five letters long
+#text.scan #returns an array of words that are five letters long
+#"extreme briny crepe parking snaps grouping snafu round dog be fork spoon"
 text.scan(/\b\w{5}\b/)
 #binding.pry
 end
@@ -25,6 +25,7 @@ end
 def valid_phone_number?(phone)
   #"2438894546"
   #returns true for valid phone numbers, regardless of formatting
-phone.match(/(\d *?){10}|(\(\d{3}\)((\d{3}-\d{4})|\d{7})\b)/) ? true : false
+
+  binding.pry
 #binding.pry
 end
